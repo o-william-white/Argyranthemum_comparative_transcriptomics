@@ -1,6 +1,6 @@
 
 
-#### import raw data to iridis
+### Import raw data to iridis
 
 ```
 # in iridis
@@ -11,7 +11,9 @@ mkdir /scratch/oww1c19/argyranthemum_transcriptomics/raw_data
 rsync -avz --partial /drives/d/Trancriptomics/C101HW16120181/raw_data oww1c19@iridis4_c.soton.ac.uk:/scratch/oww1c19/argyranthemum_transcriptomics
 ```
 
-#### trimmomatic
+### Pre processing
+
+#### Trimmomatic
 ```
 mkdir /scratch/oww1c19/argyranthemum_transcriptomics/trimmomatic
 cd /scratch/oww1c19/argyranthemum_transcriptomics/trimmomatic
@@ -19,7 +21,7 @@ cd /scratch/oww1c19/argyranthemum_transcriptomics/trimmomatic
 qsub script_trimmomatic.pbs
 ```
 
-#### normalise reads 
+#### Normalise reads 
 ```
 mkdir /scratch/oww1c19/argyranthemum_transcriptomics/normalise_reads
 cd /scratch/oww1c19/argyranthemum_transcriptomics/normalise_reads
@@ -63,7 +65,7 @@ ls -1 normalise_*/trim*2.fq.gz_ext_all_reads.normalized_K25_maxC30_minC0_maxCV10
 qsub script_normalise_all.pbs
 ```
 
-#### run trininty assemblies
+### Trininty assemblies
 ```
 mkdir /scratch/oww1c19/argyranthemum_transcriptomics/trinity_all
 mkdir /scratch/oww1c19/argyranthemum_transcriptomics/trinity_separate
