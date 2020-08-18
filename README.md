@@ -1,28 +1,27 @@
 
-# file structure
 
-### import raw data to iridis
+#### import raw data to iridis
 
+```
 # in iridis
 mkdir /scratch/oww1c19/argyranthemum_transcriptomics
 mkdir /scratch/oww1c19/argyranthemum_transcriptomics/raw_data
 
 # in local terminal
 rsync -avz --partial /drives/d/Trancriptomics/C101HW16120181/raw_data oww1c19@iridis4_c.soton.ac.uk:/scratch/oww1c19/argyranthemum_transcriptomics
+```
 
-
-### trimmomatic
-
+#### trimmomatic
+```
 mkdir /scratch/oww1c19/argyranthemum_transcriptomics/trimmomatic
 cd /scratch/oww1c19/argyranthemum_transcriptomics/trimmomatic
 
 qsub script_trimmomatic.pbs
+```
 
-
-### normalise reads 
-
+#### normalise reads 
+```
 mkdir /scratch/oww1c19/argyranthemum_transcriptomics/normalise_reads
-
 cd /scratch/oww1c19/argyranthemum_transcriptomics/normalise_reads
 
 # create normalisation input lists for each species
@@ -62,13 +61,12 @@ ls -1 normalise_*/trim*1.fq.gz_ext_all_reads.normalized_K25_maxC30_minC0_maxCV10
 ls -1 normalise_*/trim*2.fq.gz_ext_all_reads.normalized_K25_maxC30_minC0_maxCV10000.fq | sed 's:normalise:/scratch/oww1c19/argyranthemum_transcriptomics/normalise_reads/normalise:g' > input_all_right
 
 qsub script_normalise_all.pbs
+```
 
-
-### run trininty assemblies
-
+#### run trininty assemblies
+```
 mkdir /scratch/oww1c19/argyranthemum_transcriptomics/trinity_all
 mkdir /scratch/oww1c19/argyranthemum_transcriptomics/trinity_separate
-
 
 cd /scratch/oww1c19/argyranthemum_transcriptomics/trinity_separate
 
@@ -80,6 +78,7 @@ qsub script_trinity_sun.pbs
 cd /scratch/oww1c19/argyranthemum_transcriptomics/trinity_all
 
 qsub script_trinity_all.pbs
+```
 
 
 
@@ -88,6 +87,7 @@ qsub script_trinity_all.pbs
 
 ### summary stats
 
+```
 mkdir /scratch/oww1c19/argyranthemum_transcriptomics/summary_stats
 cd /scratch/oww1c19/argyranthemum_transcriptomics/summary_stats
 
@@ -133,4 +133,4 @@ qsub script_count_trimmomatic_reads.pbs
 
 # create summary stats table
 paste seq_id sample_id raw_reads trimmomatic_reads > summary_stats
-
+```
