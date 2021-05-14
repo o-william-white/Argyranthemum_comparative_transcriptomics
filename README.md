@@ -132,6 +132,9 @@ ls -1 normalise_*/trim*2.fq.gz_ext_all_reads.normalized_K25_maxC30_minC0_maxCV10
 
 # run normalisation for all species together
 qsub script_normalise_all.pbs
+
+# get summary normalisation
+grep -e "reads selected during normalization" job_normalise_* | sed -e 's/:/\t/g' -e 's: / :\t:g' -e 's: = :\t:g' -e 's/reads selected during normalization.//g'
 ```
 
 <br/>
