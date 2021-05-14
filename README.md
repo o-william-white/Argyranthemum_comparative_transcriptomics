@@ -217,7 +217,9 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_prep_ref.pbs .
 
 # run prep reference
 qsub -v REF_PATH=/scratch/oww1c19/argyranthemum_transcriptomics/trinity_all/,REF=trinity_all_rh.Trinity.fasta script_prep_ref.pbs
-````blast_separate/ blast_separate/
+```
+blast_separate/ blast_separate/
+
 ##### Pipeline 1 - Align and estimate abundance
 ```
 # set up dir
