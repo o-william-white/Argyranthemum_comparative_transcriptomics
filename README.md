@@ -430,6 +430,9 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_cd_hit_est_0.95
 
 # run cd-hit-est
 qsub -v REF=/scratch/oww1c19/argyranthemum_transcriptomics/trinity_all/trinity_all_rh.Trinity.fasta,OUT=trinity_all_rh_cd_hit_0.95.Trinity.fasta script_cd_hit_est_0.95.pbs
+
+# how many transcripts
+grep -e "^>" -c trinity_all_rh_cd_hit_0.95.Trinity.fasta
 ```
 ##### Pipeline 2 - Prep reference
 ```
@@ -560,6 +563,9 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_cd_hit_est_0.95
 
 # run cd-hit-est
 qsub -v REF=/scratch/oww1c19/argyranthemum_transcriptomics/trinity_separate/trinity_cat_rh.Trinity.fasta,OUT=trinity_cat_rh_cd_hit_0.95.Trinity.fasta script_cd_hit_est_0.95.pbs
+
+# how many transcripts
+grep -e "^>" -c trinity_cat_rh_cd_hit_0.95.Trinity.fasta
 ```
 ##### Pipeline 3 - Prep reference
 ```
