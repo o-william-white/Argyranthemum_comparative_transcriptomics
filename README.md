@@ -721,6 +721,11 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_cd_hit_0.995.pb
 
 # run cd hit
 qsub script_cd_hit_0.995.pbs
+
+# how many transcripts
+for i in bro sun lem fru; do 
+   echo ${i} $(grep -e "^>" -c trinity_pep_${i}_cd_hit.fasta)
+done
 ```
 
 ##### Concatenate the species specific assemblies
