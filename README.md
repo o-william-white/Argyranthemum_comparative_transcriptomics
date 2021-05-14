@@ -697,6 +697,11 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_transdecoder.pb
 
 # run transdecoder
 qsub script_transdecoder.pbs
+
+# how many ORFs
+for i in bro sun lem fru; do 
+   echo ${i} $(grep -e "^>" -c trinity_${i}_rh.Trinity.fasta.transdecoder.pep)
+done
 ```
 
 ##### cd-hit
