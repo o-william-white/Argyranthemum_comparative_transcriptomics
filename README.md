@@ -226,6 +226,9 @@ sed -e 's/TRINITY_/TRINITY_fru_/g' trinity_fru.Trinity.fasta > trinity_fru_rh.Tr
 sed -e 's/TRINITY_/TRINITY_lem_/g' trinity_lem.Trinity.fasta > trinity_lem_rh.Trinity.fasta
 sed -e 's/TRINITY_/TRINITY_sun_/g' trinity_sun.Trinity.fasta > trinity_sun_rh.Trinity.fasta
 
+# trinity stats
+qsub script_trinity_stats_separate.pbs
+
 # cat species assemblies (required for pipelie 3)
 cat trinity_bro_rh.Trinity.fasta trinity_fru_rh.Trinity.fasta trinity_lem_rh.Trinity.fasta trinity_sun_rh.Trinity.fasta > trinity_cat_rh.Trinity.fasta
 
@@ -240,6 +243,9 @@ qsub script_trinity_all.pbs
 
 # edit read headers as above
 sed -e 's/TRINITY_/TRINITY_all_/g' trinity_all.Trinity.fasta > trinity_all_rh.Trinity.fasta
+
+# trinity stats
+qsub script_trinity_stats_all.pbs
 ```
 
 <br/>
