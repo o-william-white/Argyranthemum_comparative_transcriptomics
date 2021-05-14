@@ -8,6 +8,8 @@
    - [Trimmomatic](#trimmomatic)
    - [Normalise reads ](#normalise-reads)
 
+[Read count summary](#read-count-summary)
+
 [Trininty assemblies](#trininty-assemblies)
 
 [Annotate each assembly using a blast search](#annotate-each-assembly-using-a-blast-search)
@@ -186,6 +188,12 @@ qsub script_count_trimmomatic_reads.pbs
 # create summary stats table
 paste seq_id sample_id raw_reads trimmomatic_reads > summary_stats
 ```
+
+<br/>
+<div align="right">
+    <b><a href="#argyranthemum-comparative-transcriptomics">↥ back to top</a></b>
+</div>
+<br/>
 
 
 
