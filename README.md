@@ -1,6 +1,16 @@
 
 
+### Table of contents
 
+[Import raw data to iridis](#import-raw-data-to-iridis)
+
+[Pre processing](#pre-processing)
+   - [Trimmomatic](#trimmomatic)
+   - [Normalise reads ](#normalise-reads)
+
+[Trininty assemblies](#trininty-assemblies)
+
+[Annotate each assembly using a blast search](#annotate-each-assembly-using-a-blast-search)
 
 
 ### Import raw data to iridis
