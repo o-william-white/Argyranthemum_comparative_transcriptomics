@@ -63,6 +63,13 @@ A22 A. frutescens
 A23 A. frutescens
 A24 A. frutescens
 
+<br/>
+<div align="right">
+    <b><a href="#argyranthemum-comparative-transcriptomics">↥ back to top</a></b>
+</div>
+<br/>
+
+
 
 ### Pre processing
 
@@ -175,6 +182,13 @@ qsub script_trinity_all.pbs
 sed -e 's/TRINITY_/TRINITY_all_/g' trinity_all.Trinity.fasta > trinity_all_rh.Trinity.fasta
 ```
 
+<br/>
+<div align="right">
+    <b><a href="#argyranthemum-comparative-transcriptomics">↥ back to top</a></b>
+</div>
+<br/>
+
+
 
 ### Annotate each assembly using a blast search
 ```
@@ -203,6 +217,12 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/top_hit.R .
 # run blast
 qsub script_blast_all.pbs
 ```
+
+<br/>
+<div align="right">
+    <b><a href="#argyranthemum-comparative-transcriptomics">↥ back to top</a></b>
+</div>
+<br/>
 
 
 
@@ -322,6 +342,14 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/chi_squared_test.R .
 # run script to get chi-squared test data
 qsub script_chi_squared_test.pbs
 ```
+
+<br/>
+<div align="right">
+    <b><a href="#argyranthemum-comparative-transcriptomics">↥ back to top</a></b>
+</div>
+<br/>
+
+
 
 #### Pipeline 2
 
@@ -444,6 +472,13 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/chi_squared_test.R .
 # run script to get chi-squared test data
 qsub script_chi_squared_test.pbs
 ```
+
+<br/>
+<div align="right">
+    <b><a href="#argyranthemum-comparative-transcriptomics">↥ back to top</a></b>
+</div>
+<br/>
+
 
 
 #### Pipeline 3
@@ -569,6 +604,13 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/chi_squared_test.R .
 qsub script_chi_squared_test.pbs
 ```
 
+<br/>
+<div align="right">
+    <b><a href="#argyranthemum-comparative-transcriptomics">↥ back to top</a></b>
+</div>
+<br/>
+
+
 
 #### Preparation for pipelines 4, 5 and 6
 
@@ -637,9 +679,11 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/top_hit.R .
 qsub script_blast_concat.pbs
 ```
 
-
-
-
+<br/>
+<div align="right">
+    <b><a href="#argyranthemum-comparative-transcriptomics">↥ back to top</a></b>
+</div>
+<br/>
 
 
 
@@ -783,6 +827,12 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/chi_squared_test_gene_
 # run script to get chi-squared test data
 qsub script_chi_squared_test_gene_trans_map.pbs
 ```
+
+<br/>
+<div align="right">
+    <b><a href="#argyranthemum-comparative-transcriptomics">↥ back to top</a></b>
+</div>
+<br/>
 
 
 
@@ -945,6 +995,11 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/chi_squared_test_gene_
 qsub script_chi_squared_test_gene_trans_map.pbs
 ```
 
+<br/>
+<div align="right">
+    <b><a href="#argyranthemum-comparative-transcriptomics">↥ back to top</a></b>
+</div>
+<br/>
 
 
 ### Chi-squared comparison
@@ -957,4 +1012,9 @@ for i in {1..6}; do
 done
 ```
 
+<br/>
+<div align="right">
+    <b><a href="#argyranthemum-comparative-transcriptomics">↥ back to top</a></b>
+</div>
+<br/>
 
