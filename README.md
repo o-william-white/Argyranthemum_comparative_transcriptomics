@@ -140,6 +140,55 @@ qsub script_normalise_all.pbs
 
 
 
+### Read count summary
+```
+mkdir /scratch/oww1c19/argyranthemum_transcriptomics/summary_stats
+cd /scratch/oww1c19/argyranthemum_transcriptomics/summary_stats
+
+# create sequence id list
+for i in {1..24}
+do 
+	echo A${i}_1 >> seq_id
+	echo A${i}_2 >> seq_id
+done
+
+# create sample id list
+for i in {1..6}
+do
+   echo bro_${i}_r1 >> sample_id
+   echo bro_${i}_r2 >> sample_id
+done
+
+for i in {7..12}
+do
+   echo sun_${i}_r1 >> sample_id
+   echo sun_${i}_r2 >> sample_id
+done
+
+for i in {13..18}
+do
+   echo lem_${i}_r1 >> sample_id
+   echo lem_${i}_r2 >> sample_id
+done
+
+for i in {19..24}
+do
+   echo fru_${i}_r1 >> sample_id
+   echo fru_${i}_r2 >> sample_id
+done
+
+# count raw reads
+qsub script_count_raw_reads.pbs
+
+# count trimmomatic reads
+qsub script_count_trimmomatic_reads.pbs
+
+# create summary stats table
+paste seq_id sample_id raw_reads trimmomatic_reads > summary_stats
+```
+
+
+
 ### Trininty assemblies
 ```
 # set up dir
