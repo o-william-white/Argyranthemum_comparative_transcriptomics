@@ -12,6 +12,16 @@
 
 [Annotate each assembly using a blast search](#annotate-each-assembly-using-a-blast-search)
 
+[Implement pipelines 1-6](#implement-pipelines-1-6)
+   - [Pipeline 1](#pipeline-1)
+   - [Pipeline 2](#pipeline-2)
+   - [Pipeline 3](#pipeline-3)
+   - [Pipeline 4](#pipeline-4)
+   - [Pipeline 5](#pipeline-5)
+   
+
+
+Implement pipelines 1-6
 
 ### Import raw data to iridis
 
