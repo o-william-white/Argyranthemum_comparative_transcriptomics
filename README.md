@@ -786,6 +786,9 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_orthofinder_pip
 
 # run orthofinder
 qsub script_orthofinder_pipeline_4.pbs
+
+# how many single copy orthogroups
+wc -l  Results_Oct08/Orthogroups/Orthogroups_SingleCopyOrthologues.txt
 ```
 ##### Pipeline 4 - Write gene to trans map
 ```
