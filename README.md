@@ -684,7 +684,7 @@ qsub script_chi_squared_test.pbs
 
 
 
-#### Preparation for pipelines 4, 5 and 6
+#### Preparation for pipelines 4 and 5
 
 ##### Transdecoder
 ```
@@ -726,6 +726,9 @@ qsub script_cd_hit_0.995.pbs
 for i in bro sun lem fru; do 
    echo ${i} $(grep -e "^>" -c trinity_pep_${i}_cd_hit.fasta)
 done
+
+# how many overall
+cat trinity_pep_*_cd_hit.fasta | grep -e "^>" -c
 ```
 
 ##### Concatenate the species specific assemblies
