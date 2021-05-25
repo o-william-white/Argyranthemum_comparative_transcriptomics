@@ -789,9 +789,6 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_orthofinder_pip
 
 # run orthofinder
 qsub script_orthofinder_pipeline_4.pbs
-
-# how many single copy orthogroups
-wc -l  Results_Oct08/Orthogroups/Orthogroups_SingleCopyOrthologues.txt
 ```
 ##### Pipeline 4 - Write gene to trans map
 ```
@@ -804,6 +801,11 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/write_gene_trans_map_p
 
 # write gene_trans_map
 bash write_gene_trans_map_pipeline_4.sh
+
+# how many single copy orthogroups
+grep -e "^OG" gene_trans_map.txt | cut -f 1 | sort | uniq | wc -l
+# how many transcripts
+grep -e "^OG" gene_trans_map.txt | cut -f 2 |  wc -l
 ```
 ##### Pipeline 4 - Prep reference
 ```
