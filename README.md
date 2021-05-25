@@ -973,6 +973,11 @@ cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/*write_gene_trans_map_
 
 # write gene_trans_map
 qsub script_write_gene_trans_map_pipeline_5.pbs
+
+# how many single copy orthogroups
+grep -e "^OG" gene_trans_map.txt | cut -f 1 | sort | uniq | wc -l
+# how many transcripts
+grep -e "^OG" gene_trans_map.txt | cut -f 2 |  wc -l
 ```
 ##### Pipeline 5 - Prep reference
 ```
