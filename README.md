@@ -390,7 +390,8 @@ mkdir /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_1/ref_all_by_all_b
 cd /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_1/ref_all_by_all_blast
 
 # cp scripts to dir
-cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_all_by_all_rbbh.pbs .                                                                                         cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/all_by_all_rbbh.py .
+cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_all_by_all_rbbh.pbs .
+cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/all_by_all_rbbh.py .
 
 # cp ref to dir
 cp /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_1/prep_reference/trinity_all_rh.Trinity.fasta .
