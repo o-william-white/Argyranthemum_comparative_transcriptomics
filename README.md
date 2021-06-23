@@ -910,11 +910,12 @@ mkdir /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_4/ref_all_by_all_b
 cd /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_4/ref_all_by_all_blast
 
 # cp scripts to dir
-cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_ref_all_by_all_blast_gene_trans_map.pbs .
-cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/identify_reference_transcript.R .
+cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_all_by_all_rbbh_gene_trans_map.pbs .
+cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/identify_reference_transcript.py .
+cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/all_by_all_rbbh.py .
 
-# run all-by-all blast 
-qsub script_ref_all_by_all_blast_gene_trans_map.pbs
+# run script
+qsub script_all_by_all_rbbh_gene_trans_map.pbs
 ```
 ##### Pipeline 4 - Chi-squared test
 ```
@@ -1082,11 +1083,12 @@ mkdir /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_5/ref_all_by_all_b
 cd /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_5/ref_all_by_all_blast
 
 # cp scripts to dir
-cp ../../scripts/script_ref_all_by_all_blast_gene_trans_map.pbs .
-cp ../../scripts/identify_reference_transcript.R .
+cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_all_by_all_rbbh_gene_trans_map.pbs .
+cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/identify_reference_transcript.py .
+cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/all_by_all_rbbh.py .
 
-# run all-by-all blast 
-qsub script_ref_all_by_all_blast_gene_trans_map.pbs
+# run script
+qsub script_all_by_all_rbbh_gene_trans_map.pbs
 ```
 ##### Pipeline 5 - Chi-squared test
 ```
