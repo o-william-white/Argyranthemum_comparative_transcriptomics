@@ -526,11 +526,15 @@ qsub -v REF=/scratch/oww1c19/argyranthemum_transcriptomics/pipeline_2/prep_refer
 mkdir /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_2/ref_all_by_all_blast
 cd /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_2/ref_all_by_all_blast
 
-# cp script to dir
-cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_ref_all_by_all_blast.pbs .
+# cp scripts to dir
+cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_all_by_all_rbbh.pbs .
+cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/all_by_all_rbbh.py .
 
-# run all-by-allblast 
-qsub -v REF=/scratch/oww1c19/argyranthemum_transcriptomics/pipeline_2/prep_reference/trinity_all_rh_cd_hit_0.95.Trinity.fasta script_ref_all_by_all_blast.pbs
+# cp ref to dir
+cp /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_2/prep_reference/trinity_all_rh_cd_hit_0.95.Trinity.fasta .
+
+# run all-by-all blast 
+qsub -v REF=trinity_all_rh_cd_hit_0.95.Trinity.fasta script_all_by_all_rbbh.pbs
 ```
 ##### Pipeline 2 - Chi-squared test
 ```
