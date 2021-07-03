@@ -407,7 +407,7 @@ cd /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_1/chi_squared_test
 
 # cp scripts to dir
 cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_chi_squared_test.pbs .
-cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/chi_squared_test.R .
+cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/chi_squared_test.py .
 
 # run script to get chi-squared test data
 qsub script_chi_squared_test.pbs
@@ -544,7 +544,7 @@ cd /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_2/chi_squared_test
 
 # cp scripts to dir
 cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_chi_squared_test.pbs .
-cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/chi_squared_test.R .
+cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/chi_squared_test.py .
 
 # run script to get chi-squared test data
 qsub script_chi_squared_test.pbs
@@ -682,7 +682,7 @@ cd /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_3/chi_squared_test
 
 # cp scripts to dir
 cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_chi_squared_test.pbs .
-cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/chi_squared_test.R .
+cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/chi_squared_test.py .
 
 # run script to get chi-squared test data
 qsub script_chi_squared_test.pbs
