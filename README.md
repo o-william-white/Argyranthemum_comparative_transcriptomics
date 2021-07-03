@@ -1093,8 +1093,8 @@ qsub script_all_by_all_rbbh_gene_trans_map.pbs
 ##### Pipeline 5 - Chi-squared test
 ```
 # set up dir
-mkdir /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_4/chi_squared_test
-cd /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_4/chi_squared_test
+mkdir /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_5/chi_squared_test
+cd /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_5/chi_squared_test
 
 # cp scripts to dir
 cp /scratch/oww1c19/argyranthemum_transcriptomics/scripts/script_chi_squared_test_gene_trans_map.pbs .
