@@ -1114,10 +1114,10 @@ qsub script_chi_squared_test_gene_trans_map.pbs
 ### Chi-squared comparison
 
 ```
-mkdir /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_comparison
+mkdir /scratch/oww1c19/argyranthemum_transcriptomics/chi_squared_comparison
 
-for i in {1..6}; do 
-   cp /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_${i}/chi_squared_test/chi_squared_data.txt /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_comparison/chi_squared_data_pipeline_${i}.txt; 
+for i in {1..5}; do 
+   cp /scratch/oww1c19/argyranthemum_transcriptomics/pipeline_${i}/chi_squared_test/chi_squared_data.txt /scratch/oww1c19/argyranthemum_transcriptomics/chi_squared_comparison/chi_squared_data_pipeline_${i}.txt; 
 done
 ```
 
