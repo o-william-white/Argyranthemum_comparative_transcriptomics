@@ -939,7 +939,7 @@ qsub script_chi_squared_test_gene_trans_map.pbs
 
 
 
-### pipeline 5
+### Pipeline 5
 
 ##### Pipeline 5 - OrthoFinder
 ```
